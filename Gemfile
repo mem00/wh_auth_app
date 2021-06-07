@@ -29,7 +29,6 @@ gem 'jbuilder', '~> 2.7'
 gem 'bootsnap', '>= 1.4.2', require: false
 
 gem 'slim-rails'
-gem 'erb2slim'
 gem 'bootstrap', '~> 5.0.1'
 gem 'devise', '~> 4.2'
 gem 'petergate'
