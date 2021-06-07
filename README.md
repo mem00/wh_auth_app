@@ -1,24 +1,23 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a basic authentication app that differentiates between customer and admin permissions.
 
-Things you may want to cover:
+About:
 
-* Ruby version
+* Ruby 2.5.1
 
-* System dependencies
+* Rails 6.0.3.7
 
-* Configuration
+* [Postgresql] (https://formulae.brew.sh/formula/postgresql)
 
-* Database creation
 
-* Database initialization
+How to run:
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+1. bundle i
+2. rake db:create
+3. rake db:migrate
+4. rake db:seed
+5. rake test
+6. rake test:system
+7. rails s
+8. view at [localhost:3000] (localhost:3000)
