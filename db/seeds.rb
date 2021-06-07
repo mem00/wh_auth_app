@@ -5,3 +5,27 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+User.find_or_create_by(email: "michael3mcguire@gmail.com") do |user|
+  user.first_name = "Michael"
+  user.last_name = "McGuire"
+end
+
+User.find_or_create_by(email: "dani@worthsearch.com") do |user|
+  user.first_name = "Dani"
+  user.last_name = "Dugan"
+end
+
+User.find_or_create_by(email: "jesse@welomehomes.com") do |user|
+  user.first_name = "Jesse"
+  user.last_name = "Mauro"
+end
+User.find_or_create_by(email: "jose@welomehomes.com") do |user|
+  user.first_name = "Jose"
+  user.last_name = "Camacho"
+end
+
+
+
+
