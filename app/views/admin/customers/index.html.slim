@@ -1,0 +1,13 @@
+h2 Users
+.table-responsive
+  table.table.table-striped.table-sm 
+    thead
+      tr 
+        th Name 
+        th email
+    tbody 
+    - @users.each do |user|
+      tr
+        td #{user.first_name} #{user.last_name}
+        td #{user.email}
+
