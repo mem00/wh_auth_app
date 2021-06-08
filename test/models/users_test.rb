@@ -6,6 +6,7 @@ class UsersTest < ActiveSupport::TestCase
     user.email = "test@test.com"
     user.first_name = "test"
     user.last_name = "test"
+    user.password = "123456"
     assert user.save!
   end
 
