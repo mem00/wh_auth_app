@@ -24,11 +24,38 @@ User.find_or_create_by(email: "jesse@welomehomes.com") do |user|
   user.last_name = "Mauro"
   user.password = "123456"
 end
+
 User.find_or_create_by(email: "jose@welomehomes.com") do |user|
   user.first_name = "Jose"
   user.last_name = "Camacho"
   user.password = "123456"
 end
+
+User.find_or_create_by(email: "admin@admin.com") do |user|
+  user.first_name = "Admin"
+  user.last_name = "Admin"
+  user.password = "123456"
+end
+
+Admin.find_or_create_by(email: "admin@admin.com") do |user|
+  user.first_name = "Admin"
+  user.last_name = "Admin"
+  user.password = "123456"
+end
+
+Admin.find_or_create_by(email: "a@a.com") do |user|
+  user.first_name = "Admin"
+  user.last_name = "Admin2"
+  user.password = "123456"
+end
+
+User.find_or_create_by(email: "customer@customer.com") do |user|
+  user.first_name = "Customer"
+  user.last_name = "Customer"
+  user.password = "123456"
+end
+
+
 
 
 

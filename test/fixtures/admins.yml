@@ -1,0 +1,6 @@
+admin:
+  id: 1
+  email: admin@admin.com
+  first_name: Super
+  last_name: Admin
+  encrypted_password: 123456

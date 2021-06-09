@@ -1,15 +1,25 @@
 Rails.application.routes.draw do
   devise_for :users, :controllers => { registrations: 'users/registrations' }
+  devise_for :admins, only: [:sessions]
+
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
-  root to: "home#index"
+  authenticated :user do
+    root to: 'home#index', as: :authenticated_root
+  end
+  root to: redirect('/users/sign_in')
 
   resources :home, only: [:index]
 
   namespace :admin do
-    resources :customers, only: [:index]
+    authenticated :admin do
+      root to: 'customers#index', as: :authenticated_root
+    end
+    root to: redirect('/admins/sign_in')
 
-    devise_for :users, only: [:sessions], controllers: { sessions: "admin/users/sessions" }
+    resources :customers, only: [:index]  do
+        post :impersonate, on: :member
+    end
   end
   
 end
