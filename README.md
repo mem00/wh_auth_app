@@ -20,5 +20,5 @@ How to run:
 5. rake test
 6. rake test:system
 7. rails s
-8. login at [localhost:3000] (localhost:3000) w/ email: admin@admin.com - password: 123456 (check seeds for more)
-9. login to admin panel @ [localhost:3000/admins/sign_in] (localhost:3000/admins/sign_in) w/ email: admin@admin.com - password: 123456
+8. login @ [localhost:3000](localhost:3000) w/ email: admin@admin.com - password: 123456 (check seeds for more)
+9. login to admin panel @ [localhost:3000/admins/sign_in](localhost:3000/admins/sign_in) w/ email: admin@admin.com - password: 123456
