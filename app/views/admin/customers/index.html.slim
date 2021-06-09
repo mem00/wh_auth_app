@@ -4,10 +4,16 @@ h2 Users
     thead
       tr 
         th Name 
-        th email
+        th Email
+        th Impersonate
     tbody 
     - @users.each do |user|
       tr
         td #{user.first_name} #{user.last_name}
         td #{user.email}
+        td 
+            form action="#{impersonate_admin_customer_path(user.id)}" method="Post"
+              =hidden_field_tag :authenticity_token, form_authenticity_token
+              input type="hidden" value="#{user.id}" name="id" 
+              input type="submit" value="Impersonate #{user.first_name}"
 
