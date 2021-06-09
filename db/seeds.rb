@@ -37,16 +37,16 @@ User.find_or_create_by(email: "admin@admin.com") do |user|
   user.password = "123456"
 end
 
-Admin.find_or_create_by(email: "admin@admin.com") do |user|
-  user.first_name = "Admin"
-  user.last_name = "Admin"
-  user.password = "123456"
+Admin.find_or_create_by(email: "admin@admin.com") do |admin|
+  admin.first_name = "Admin"
+  admin.last_name = "Admin"
+  admin.password = "123456"
 end
 
-Admin.find_or_create_by(email: "a@a.com") do |user|
-  user.first_name = "Admin"
-  user.last_name = "Admin2"
-  user.password = "123456"
+Admin.find_or_create_by(email: "a@a.com") do |admin|
+  admin.first_name = "Admin"
+  admin.last_name = "Admin2"
+  admin.password = "123456"
 end
 
 User.find_or_create_by(email: "customer@customer.com") do |user|
